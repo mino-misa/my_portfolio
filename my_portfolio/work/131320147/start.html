@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>音感チェッカー</title>
+    <style>
+        body {
+            background-color: #fdf7e1;
+            text-align: center;
+        }
+
+
+        /* 遊び方 */
+        .setumei {
+            margin-bottom: 20px;
+        }
+
+        /* 開始ボタン */
+        .nextpage a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            padding: 1em 2em;
+            width: 80px;
+            color: #59b7d1;
+            font-size: 24px;
+            font-weight: 700;
+            background-color: #ffffff;
+            border: solid 5px #59b7d1;
+            border-radius: 50vh;
+        }
+
+        .nextpage a::after {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-top: 3px solid #59b7d1;
+            border-right: 3px solid #59b7d1;
+            transform: rotate(45deg);
+        }
+
+        .nextpage a:hover {
+            text-decoration: none;
+            background-color: #e0f8ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HTML -->
+
+    <!-- スタート画面 -->
+    <!-- タイトル -->
+    <div class="title">
+        <img src=image/title.jpg alt="title">
+    </div>
+
+    <!-- 遊び方 -->
+    <div class="setumei">
+        <img src=image/setumei.jpg alt="setumei">
+    </div>
+
+
+
+    <!--開始ボタン -->
+    <div class="nextpage">
+        <a href="quiz.html" class="next">開始</a>
+    </div>
+
+
+</body>
+
+</html>

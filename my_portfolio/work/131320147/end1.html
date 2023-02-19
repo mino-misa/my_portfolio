@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>音感チェッカー</title>
+    <style>
+        body {
+            background-color: #fdf7e1;
+            text-align: center;
+        }
+
+        /* タイトルの大きさを設定 */
+        .title img {
+            width: 25%;
+            height: auto;
+        }
+
+        /* 結果 */
+        .kekka{
+            padding: 0.2em 0.5em;
+            margin: 2em 10em;
+            background: #f1d4cd;
+            box-shadow: 0px 0px 0px 10px #e5b6ab;
+            border: dashed 2px white;
+        }
+
+        h1{
+            margin: 20px auto;
+            font-size: 40px;
+        }
+
+        h2{
+            margin: 20px auto;
+            font-size: 50px;
+        }
+
+        /* 戻るボタン */
+        a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px auto;
+            padding: 1em 2em;
+            width: 200px;
+            color: #59b7d1;
+            font-size: 18px;
+            font-weight: 700;
+            background-color: #ffffff;
+            border: solid 5px #59b7d1;
+            border-radius: 50vh;
+        }
+
+        a::after {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-top: 3px solid #59b7d1;
+            border-right: 3px solid #59b7d1;
+            transform: rotate(45deg);
+        }
+
+        a:hover {
+            text-decoration: none;
+            background-color: #e0f8ff;
+        }
+
+        .kaitou p{
+            padding-top: 10em;
+            padding-bottom: 0em;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid;
+        }
+
+        th {
+            background: #e5b6ab;
+            border: dashed 2px #d88caf;
+            padding: 10px 5px;
+            font-family: "ＭＳ Ｐゴシック", "MS PGothic";
+            font-size: 25px;
+        }
+
+        td {
+            background: #ffffff;
+            border: dashed 2px #d88caf;
+            padding: 10px;
+            font-family: "ＭＳ ゴシック", "MS Gothic";
+            font-size: 20px;
+        }
+
+        table {
+            text-align: center;
+            width: 80%;
+            border-collapse: collapse;
+            border: solid 3px #d88caf;
+            margin: 0em auto 3em auto;
+        }
+
+        .top_c {
+            color: #000000;
+        }
+
+        .left1 {
+            width: 8%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HTML -->
+
+    <!-- 終了画面 -->
+
+    <!-- タイトル -->
+    <div class="title">
+        <img src=image/title.jpg alt="title">
+    </div>
+
+    <div class="kekka">
+    <!-- 結果 -->
+    <h1>結果</h1>
+
+    <!-- 正解数 -->
+    <h2>10問中1問正解</h2>
+    </div>
+
+    <!-- 戻るボタン -->
+    <div class="againpage">
+        <a href="start.html" class="again">スタート画面に戻る</a>
+    </div>
+
+    <p>下にスクロールすると答えが見れるよ</p>
+    <p>↓</p>
+
+    <!-- 答え -->
+    <div class="kaitou">
+        <div id="kaitou-button"></div><p id="text">答え合わせ</p></div>
+        
+        <table>
+            <tr class="top_c">
+                <th class="left1">問題</th>
+                <th>第1問</th>
+                <th>第2問</th>
+                <th>第3問</th>
+                <th>第4問</th>
+                <th>第5問</th>
+                <th>第6問</th>
+                <th>第7問</th>
+                <th>第8問</th>
+                <th>第9問</th>
+                <th>第10問</th>
+            </tr>
+            <tr>
+                <th class="left1">回答</th>
+                <td>ラ</td>
+                <td>レ</td>
+                <td>ファ</td>
+                <td>シ</td>
+                <td>ミ</td>
+                <td>ド</td>
+                <td>ソ</td>
+                <td>シ</td>
+                <td>ファ</td>
+                <td>ド</td>
+            </tr>
+        </table>
+    </div>
+
+    
+
+</body>
+
+</html>

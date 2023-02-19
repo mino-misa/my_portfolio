@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>音感チェッカー</title>
+    <style>
+        body {
+            background-color: #fdf7e1;
+            text-align: center;
+        }
+
+        /* タイトルの大きさを設定 */
+        .title img {
+            width: 30%;
+            height: auto;
+        }
+
+        /* 問題の枠 */
+        .mondai {
+            padding: 0.2em 0.5em;
+            margin: 2em 2em;
+            background: #d2bdd8;
+            box-shadow: 0px 0px 0px 10px #bda3c9;
+            border: dashed 2px white;
+        }
+
+        /* 第〇問 */
+        .mondai ul {
+            display: inline-flex;
+            margin: 0em;
+            padding-right: 50px;
+            font-family: "ＭＳ ゴシック", "MS Gothic";
+            font-size: 30px;
+
+        }
+
+        /* 選択肢 */
+        .mondai p {
+            display: inline-flex;
+            padding: 0px 150px;
+            accent-color: deeppink;
+            transform: scale(2);
+            font-family: "ＭＳ Ｐゴシック", "MS PGothic";
+        }
+
+        /* 音声 */
+        .oto {
+            padding-top: 1em;
+        }
+
+        /* 完了ボタン */
+        button {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px auto;
+            padding: 1em 2em;
+            width: 150px;
+            color: #59b7d1;
+            font-size: 20px;
+            font-weight: 700;
+            background-color: #ffffff;
+            border: solid 5px #59b7d1;
+            border-radius: 50vh;
+        }
+
+        button::after {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-top: 3px solid #59b7d1;
+            border-right: 3px solid #59b7d1;
+            transform: rotate(45deg);
+        }
+
+        button:hover {
+            text-decoration: none;
+            background-color: #e0f8ff;
+        }
+
+        /* 結果ボタン */
+        a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px auto;
+            padding: 1em 2em;
+            width: 120px;
+            color: #59b7d1;
+            font-size: 20px;
+            font-weight: 700;
+            background-color: #ffffff;
+            border: solid 5px #59b7d1;
+            border-radius: 50vh;
+        }
+
+        a::after {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-top: 3px solid #59b7d1;
+            border-right: 3px solid #59b7d1;
+            transform: rotate(45deg);
+        }
+
+        a:hover {
+            text-decoration: none;
+            background-color: #e0f8ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HTML -->
+
+    <!-- スタート画面 -->
+
+    <!-- タイトル -->
+    <div class="title">
+        <img src=image/title.jpg alt="title">
+    </div>
+
+    <!--問題 -->
+    <!-- 第1問 -->
+        <div class="mondai">
+            <ul>第1問</ul>
+
+            <audio class="oto" controls src="sound/ra1.mp3">
+            </audio>
+
+            <p>
+                <input name="quiz1" type="radio" value="a">ド</input>
+                <input name="quiz1" type="radio" value="b">レ</input>
+                <input name="quiz1" type="radio" value="c">ミ</input>
+                <input name="quiz1" type="radio" value="d">ファ</input>
+                <input name="quiz1" type="radio" value="e">ソ</input>
+                <input name="quiz1" type="radio" value="f" class="correct">ラ</input>
+                <input name="quiz1" type="radio" value="g">シ</input>
+            </p>
+        </div>
+
+        <!-- 第2問 -->
+        <div class="mondai">
+            <ul>第2問</ul>
+            <audio class="oto" controls src="sound/re1.mp3">
+            </audio>
+
+            <p>
+                <input name="quiz2" type="radio" value="a">ド</input>
+                <input name="quiz2" type="radio" value="b" class="correct">レ</input>
+                <input name="quiz2" type="radio" value="c">ミ</input>
+                <input name="quiz2" type="radio" value="d">ファ</input>
+                <input name="quiz2" type="radio" value="e">ソ</input>
+                <input name="quiz2" type="radio" value="f">ラ</input>
+                <input name="quiz2" type="radio" value="g">シ</input>
+            </p>
+        </div>
+
+        <!-- 第3問 -->
+        <div class="mondai">
+            <ul>第3問</ul>
+            <audio class="oto" controls src="sound/fa1.mp3">
+            </audio>
+
+            <p>
+                <input name="quiz3" type="radio" value="a">ド</input>
+                <input name="quiz3" type="radio" value="b">レ</input>
+                <input name="quiz3" type="radio" value="c">ミ</input>
+                <input name="quiz3" type="radio" value="d" class="correct">ファ</input>
+                <input name="quiz3" type="radio" value="e">ソ</input>
+                <input name="quiz3" type="radio" value="f">ラ</input>
+                <input name="quiz3" type="radio" value="g">シ</input>
+            </p>
+        </div>
+
+        <!-- 第4問 -->
+        <div class="mondai">
+            <ul>第4問</ul>
+            <audio class="oto" controls src="sound/si1.mp3">
+            </audio>
+
+            <p>
+                <input name="quiz4" type="radio" value="a">ド</input>
+                <input name="quiz4" type="radio" value="b">レ</input>
+                <input name="quiz4" type="radio" value="c">ミ</input>
+                <input name="quiz4" type="radio" value="d">ファ</input>
+                <input name="quiz4" type="radio" value="e">ソ</input>
+                <input name="quiz4" type="radio" value="f">ラ</input>
+                <input name="quiz4" type="radio" value="g" class="correct">シ</input>
+            </p>
+        </div>
+
+        <!-- 第5問 -->
+        <div class="mondai">
+            <ul>第5問</ul>
+            <audio class="oto" controls src="sound/mi1.mp3">
+            </audio>
+
+            <p>
+                <input name="quiz5" type="radio" value="a">ド</input>
+                <input name="quiz5" type="radio" value="b">レ</input>
+                <input name="quiz5" type="radio" value="c" class="correct">ミ</input>
+                <input name="quiz5" type="radio" value="d">ファ</input>
+                <input name="quiz5" type="radio" value="e">ソ</input>
+                <input name="quiz5" type="radio" value="f">ラ</input>
+                <input name="quiz5" type="radio" value="g">シ</input>
+            </p>
+        </div>
+
+        <!-- 第6問 -->
+        <div class="mondai">
+            <ul>第6問</ul>
+            <audio class="oto" controls src="sound/do2.mp3">
+            </audio>
+
+            <p>
+                <input name="quiz6" type="radio" value="a" class="correct">ド</input>
+                <input name="quiz6" type="radio" value="b">レ</input>
+                <input name="quiz6" type="radio" value="c">ミ</input>
+                <input name="quiz6" type="radio" value="d">ファ</input>
+                <input name="quiz6" type="radio" value="e">ソ</input>
+                <input name="quiz6" type="radio" value="f">ラ</input>
+                <input name="quiz6" type="radio" value="g">シ</input>
+            </p>
+        </div>
+
+        <!-- 第7問 -->
+        <div class="mondai">
+            <ul>第7問</ul>
+            <audio class="oto" controls src="sound/so2.mp3">
+            </audio>
+
+            <p>
+                <input name="quiz7" type="radio" value="a">ド</input>
+                <input name="quiz7" type="radio" value="b">レ</input>
+                <input name="quiz7" type="radio" value="c">ミ</input>
+                <input name="quiz7" type="radio" value="d">ファ</input>
+                <input name="quiz7" type="radio" value="e" class="correct">ソ</input>
+                <input name="quiz7" type="radio" value="f">ラ</input>
+                <input name="quiz7" type="radio" value="g">シ</input>
+            </p>
+        </div>
+
+        <!-- 第8問 -->
+        <div class="mondai">
+            <ul>第8問</ul>
+            <audio class="oto" controls src="sound/si2.mp3">
+            </audio>
+
+            <p>
+                <input name="quiz8" type="radio" value="a">ド</input>
+                <input name="quiz8" type="radio" value="b">レ</input>
+                <input name="quiz8" type="radio" value="c">ミ</input>
+                <input name="quiz8" type="radio" value="d">ファ</input>
+                <input name="quiz8" type="radio" value="e">ソ</input>
+                <input name="quiz8" type="radio" value="f">ラ</input>
+                <input name="quiz8" type="radio" value="g" class="correct">シ</input>
+            </p>
+        </div>
+
+        <!-- 第9問 -->
+        <div class="mondai">
+            <ul>第9問</ul>
+            <audio class="oto" controls src="sound/fa2.mp3">
+            </audio>
+
+            <p>
+                <input name="quiz9" type="radio" value="a">ド</input>
+                <input name="quiz9" type="radio" value="b">レ</input>
+                <input name="quiz9" type="radio" value="c">ミ</input>
+                <input name="quiz9" type="radio" value="d" class="correct">ファ</input>
+                <input name="quiz9" type="radio" value="e">ソ</input>
+                <input name="quiz9" type="radio" value="f">ラ</input>
+                <input name="quiz9" type="radio" value="g">シ</input>
+            </p>
+        </div>
+
+        <!-- 第10問 -->
+        <div class="mondai">
+            <ul>第10問</ul>
+            <audio class="oto" controls src="sound/do3.mp3">
+            </audio>
+
+            <p>
+                <input name="quiz10" type="radio" value="a" class="correct">ド</input>
+                <input name="quiz10" type="radio" value="b">レ</input>
+                <input name="quiz10" type="radio" value="c">ミ</input>
+                <input name="quiz10" type="radio" value="d">ファ</input>
+                <input name="quiz10" type="radio" value="e">ソ</input>
+                <input name="quiz10" type="radio" value="f">ラ</input>
+                <input name="quiz10" type="radio" value="g">シ</input>
+            </p>
+        </div>
+
+
+    <!-- 結果 -->
+    <div class="endpage">
+        <!-- 完了ボタン -->
+        <button type="button" id="finishButton">完了</button>
+        <p id="resultButton"></p>
+    </div>
+
+
+
+
+    <script>
+        // Strictモード
+        "use strict";
+
+        //JavaScript
+        const questions = document.querySelectorAll('.mondai');
+        const resultButton = document.querySelector('#resultButton');
+        //問題数
+        const questionsNumber = questions.length;
+
+        //「結果」ボタンを押したときの処理
+        document.getElementById("finishButton").onclick = function() {
+            //正解数
+            let count = 0;
+            //それぞれの問題について調べる
+            for (var i = 0; i < questionsNumber; i++) {
+                //その問題の選択肢
+                const options = questions[i].querySelectorAll('input');
+                //それぞれの選択肢について調べる
+                for (var j = 0; j < options.length; j++) {
+                    //checked がついている（選択されている）選択肢が正解の場合
+                    if (options[j].checked && options[j].classList.contains('correct')) {
+                        //正解数にカウント
+                        count++;
+                    }
+                }
+            }
+
+            //正解数によって結果画面を変更する
+
+            if (count == 0) {
+                resultButton.innerHTML = '<a href="end0.html">結果を見る</a>';
+            } else if (count == 1) {
+                resultButton.innerHTML = '<a href="end1.html">結果を見る</a>';
+            } else if (count == 2) {
+                resultButton.innerHTML = '<a href="end2.html">結果を見る</a>';
+            } else if (count == 3) {
+                resultButton.innerHTML = '<a href="end3.html">結果を見る</a>';
+            } else if (count == 4) {
+                resultButton.innerHTML = '<a href="end4.html">結果を見る</a>';
+            } else if (count == 5) {
+                resultButton.innerHTML = '<a href="end5.html">結果を見る</a>';
+            } else if (count == 6) {
+                resultButton.innerHTML = '<a href="end6.html">結果を見る</a>';
+            } else if (count == 7) {
+                resultButton.innerHTML = '<a href="end7.html">結果を見る</a>';
+            } else if (count == 8) {
+                resultButton.innerHTML = '<a href="end8.html">結果を見る</a>';
+            } else if (count == 9) {
+                resultButton.innerHTML = '<a href="end9.html">結果を見る</a>';
+            } else if (count == 10) {
+                resultButton.innerHTML = '<a href="end10.html">結果を見る</a>';
+            }
+        };
+
+    </script>
+
+</body>
+
+</html>
